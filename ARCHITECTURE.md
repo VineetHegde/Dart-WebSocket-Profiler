@@ -1,14 +1,14 @@
 # Architecture Design: WebSocket Profiler for Dart VM
 
-## 1. The Problem Space
+## 1. The Problem
 
 The Dart and Flutter DevTools Network panel currently provides deep visibility into HTTP requests but lacks introspection for WebSocket traffic. As real-time, bidirectional data becomes standard in modern application architectures, this visibility gap severely limits developer debugging capabilities. Closing this gap is critical for debugging real-time chat, multiplayer gaming, and live-trading applications.
 
-## 2. The Core Architecture
+## 2. Core Architecture
 
 Global DevTools visibility requires deep, native instrumentation within the Dart SDK rather than relying on application-layer wrappers. The profiler is built on an opt-in, event-driven streaming architecture. It bridges `dart:io`, the Dart VM Service Protocol, and the Flutter DevTools frontend to process high-frequency WebSocket frames with minimal performance overhead on the Dart event loop.
 
-### The Data Flow
+### Data Flow
 
 ```mermaid
 flowchart LR
