@@ -1,0 +1,13 @@
+name: websocket_profiler
+description: A sample project demonstrating real-time WebSocket traffic interception for Dart DevTools.
+version: 1.0.0
+
+environment:
+  sdk: ^3.10.7
+
+dependencies:
+  path: ^1.9.0
+
+dev_dependencies:
+  lints: ^6.0.0
+  test: ^1.25.6
